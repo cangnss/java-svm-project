@@ -38,8 +38,13 @@ public class Main {
 
 		// Create a test instance and predict its label using the trained model
 		Instance testInstance = data.instance(0);
-		testInstance.setValue(0, 4);
-		testInstance.setValue(1, 5);
+		testInstance.setValue(0, 7.2); //width
+		testInstance.setValue(1, 6.5); //height
+		
+		testInstance.setValue(0, 4.2);
+		testInstance.setValue(1, 2.5);
+
+
 		int prediction = ls.predict(testInstance, weights);
 		System.out.println("Predicted label: " + prediction);
 

@@ -36,6 +36,7 @@ public class LinearSVM {
 		for (int i = 0; i < data.numAttributes(); i++) {
 			prediction += data.value(i) * weights[i];
 		}
+		System.out.println("prediction:" + prediction);
 		// Check if the dot product is greater than 0 to predict the label
 		return prediction > 0 ? 1 : -1;
 	}
