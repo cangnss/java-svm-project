@@ -1,6 +1,6 @@
 import java.awt.EventQueue;
 import java.util.Random;
-
+//..
 import weka.core.Instance;
 import weka.core.Instances;
 
@@ -8,26 +8,22 @@ public class Main {
 
 	public static void main(String[] args) {
 		// CreateDataset.createDataset();
-		// Read the dataset from file and store it in an Instances object
+		// Read the dataset from file and s	tore it in an Instances object
 		Instances data = ReadDataset.readDataset();
 		LinearSVM ls = new LinearSVM();
 
 		// Create an array to store the labels of the instances
 		int[] labels = new int[data.numInstances()];
-		// Iterate through the instances and assign labels based on the values of the
-		// first two attributes
+		// Iterate through the instances and assign labels based on the values of the first two attributes
 		for (int i = 0; i < data.numInstances(); i++) {
 			if (data.instance(i).value(0) >= 5 && data.instance(i).value(1) >= 4) {
 				labels[i] = 1;
-				System.out.println(
-						"x value: " + data.instance(i).value(0) + " y value: " + data.instance(i).value(1) + " RIPE");
+				System.out.println("x value: " + data.instance(i).value(0) + " y value: " + data.instance(i).value(1) + " RIPE");
 			} else {
 				labels[i] = -1;
-				System.out.println(
-						"x value: " + data.instance(i).value(0) + " y value: " + data.instance(i).value(1) + " UNRIPE");
+				System.out.println("x value: " + data.instance(i).value(0) + " y value: " + data.instance(i).value(1) + " UNRIPE");
 
 			}
-			// System.out.println("i: " + labels[i]);
 		}
 
 		// Train the linear SVM model using the data and labels

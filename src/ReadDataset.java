@@ -16,9 +16,6 @@ public class ReadDataset {
 
 			// Set the last attribute as the class attribute
 			data.setClassIndex(data.numAttributes() - 1);
-
-			// Print the dataset
-			// System.out.println(data);
 			return data;
 		} catch (IOException e) {
 			e.printStackTrace();

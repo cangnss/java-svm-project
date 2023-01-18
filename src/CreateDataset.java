@@ -25,8 +25,6 @@ public class CreateDataset {
 			bufferedWriter.newLine();
 			bufferedWriter.write("@attribute y numeric");
 			bufferedWriter.newLine();
-			// bufferedWriter.write("@attribute class {0,1}");
-			// bufferedWriter.newLine();
 			bufferedWriter.newLine();
 			bufferedWriter.write("@data");
 			bufferedWriter.newLine();
@@ -36,7 +34,6 @@ public class CreateDataset {
 				// Generate random values for x and y between 0 and 10
 				double x = Math.round((rand.nextDouble() * 10 + 3) * 100.0) / 100.0;
 				double y = Math.round((rand.nextDouble() * 10 + 3) * 100.0) / 100.0;
-
 				bufferedWriter.write(x + "," + y);
 				bufferedWriter.newLine();
 			}
